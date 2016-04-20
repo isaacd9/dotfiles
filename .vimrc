@@ -70,6 +70,7 @@ nnoremap <A-F9> 9gt
 nnoremap <A-F0> 10gt
 
 set nobackup
+set scrolloff=5
 set swapfile
 
 let g:gitgutter_realtime = 0

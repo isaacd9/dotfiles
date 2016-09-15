@@ -68,6 +68,7 @@ nnoremap <A-F7> 7gt
 nnoremap <A-F8> 8gt
 nnoremap <A-F9> 9gt
 nnoremap <A-F0> 10gt
+nnoremap 0 ^
 
 set nobackup
 set scrolloff=5

@@ -4,7 +4,14 @@ alias s="source ~/.zshrc"
 alias ls="ls -F"
 alias sl=ls
 #alias vim=mvim
-alias vim="mvim -v"
+
+if [ $(which mvim 2&> /dev/null; echo $?) -eq 0 ]; then
+  alias vim="mvim -v"
+else
+  echo "mvim not found, faling back to vim"
+  unalias vim
+fi
+
 alias vi=vim
 alias @code="~/code"
 

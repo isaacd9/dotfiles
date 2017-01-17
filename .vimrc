@@ -3,7 +3,7 @@ set runtimepath+=~/.vim
 execute pathogen#infect()
 
 set t_Co=256
-:set ff=unix
+set ff=unix
 set nu
 
 set tabstop=2
@@ -78,7 +78,7 @@ let g:gitgutter_realtime = 1
 let g:gitgutter_eager = 1
 
 let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_show_hidden = 1
 
 highlight ExtraWhitespace ctermbg=red guibg=red
@@ -88,9 +88,9 @@ set statusline+=%#warningmsg#
 set statusline+=%*
 
 " Enable the list of buffers
-"let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
 " Show just the filename
-"let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline#extensions#tabline#fnamemod = ':t'
 
 " This allows buffers to be hidden if you've modified a buffer.
 " This is almost a must if you wish to use buffers in this way.
@@ -170,6 +170,7 @@ autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
+autocmd FileType markdown setlocal spell
 
 " Enable heavy omni completion.
 if !exists('g:neocomplete#sources#omni#input_patterns')
@@ -188,6 +189,7 @@ let g:neocomplete#sources#omni#input_patterns.cs = '.*[^=\);]'
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+let g:airline#extensions#tabline#enabled = 1
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -196,5 +198,7 @@ let g:syntastic_check_on_wq = 0
 :let g:syntastic_loc_list_height=5
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
+set encoding=utf-8
 
+command Bd :bp\|bd
 

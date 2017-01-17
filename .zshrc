@@ -81,3 +81,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias c=clear
 source ~/.profile
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

@@ -23,6 +23,7 @@ alias c=clear
 alias s="source ~/.zshrc"
 alias e=_emoj
 alias gitignore='_gitignore'
+alias rmswap="find . -name '*.sw*' | xargs rm"
 
 alias ls="ls -hG"
 alias sl=ls

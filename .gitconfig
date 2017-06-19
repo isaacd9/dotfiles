@@ -1,6 +1,7 @@
 [user]
   name = Isaac Diamond
   email = isaacd9@gmail.com
+	signingkey = 3EF2444F
 [push]
   default = matching
 [core]

@@ -15,11 +15,12 @@ set backspace=2
 set autoindent
 set gdefault
 filetype plugin indent on
-set omnifunc=syntaxcomplete#Complete
+"set omnifunc=syntaxcomplete#Complete
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 let g:SuperTabDefaultCompletionType = "context"
 
-color wombat256mod
+"color wombat256mod
+color smyck
 syntax on
 set guifont=Source_Code_Pro_Semibold:h12:cANSI
 set guioptions-=T
@@ -80,6 +81,8 @@ let g:gitgutter_eager = 1
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_show_hidden = 1
+
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
@@ -186,25 +189,46 @@ endif
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 let g:neocomplete#sources#omni#input_patterns.cs = '.*[^=\);]'
 
+
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-let g:airline#extensions#tabline#enabled = 1
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-:let g:syntastic_loc_list_height=5
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
+let g:syntastic_check_on_wq = 1
+
+let g:syntastic_error_symbol = '❌'
+let g:syntastic_style_error_symbol = '⁉️'
+let g:syntastic_warning_symbol = '⚠️'
+let g:syntastic_style_warning_symbol = '💩'
+
+highlight link SyntasticErrorSign SignColumn
+highlight link SyntasticWarningSign SignColumn
+highlight link SyntasticStyleErrorSign SignColumn
+highlight link SyntasticStyleWarningSign SignColumn
+let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': ["c", "cpp", "c++", "ocaml", "python"],'passive_filetypes': [] }
+let g:syntastic_ocaml_checkers = ['merlin']
+let g:syntastic_python_checkers = ['pyflakes']
+
 nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
 set encoding=utf-8
 
+set fillchars="|"
+hi VertSplit cterm=none ctermbg=238 ctermfg=238 gui=none guibg=#424242
+
 command Bd :bp\|bd
 
-let g:ackprg = 'ag --vimgrep --smart-case'                                                   
-cnoreabbrev ag Ack                                                                           
-cnoreabbrev aG Ack                                                                           
-cnoreabbrev Ag Ack                                                                           
-cnoreabbrev AG Ack  
+
+let g:ackprg = 'ag --vimgrep --smart-case'
+cnoreabbrev ag Ack
+cnoreabbrev aG Ack
+cnoreabbrev Ag Ack
+cnoreabbrev AG Ack
+
+let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
+execute "set rtp+=" . g:opamshare . "/ocp-indent/vim"
+execute "set rtp+=" . g:opamshare . "/merlin/vim"
+
+let g:slime_target = "tmux"
+let g:slime_paste_file = "$HOME/.slime_paste"
+
 

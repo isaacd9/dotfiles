@@ -151,6 +151,7 @@ export PATH=$PATH:/Users/isaac/bin
 (~/.update_motd.sh &)
 
 source ~/.inspiration.sh
+alias a="tmux attach -d"
 
 # OPAM configuration
 . /Users/isaac/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true

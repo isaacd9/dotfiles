@@ -231,4 +231,5 @@ execute "set rtp+=" . g:opamshare . "/merlin/vim"
 let g:slime_target = "tmux"
 let g:slime_paste_file = "$HOME/.slime_paste"
 
+set clipboard=unnamed
 

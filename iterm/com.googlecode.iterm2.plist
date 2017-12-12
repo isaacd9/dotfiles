@@ -10,6 +10,8 @@
 	<integer>0</integer>
 	<key>AppleSmoothFixedFontsSizeThreshold</key>
 	<integer>1</integer>
+	<key>AppleWindowTabbingMode</key>
+	<string>manual</string>
 	<key>BadgeFontIsBold</key>
 	<false/>
 	<key>BadgeTopMargin</key>
@@ -425,6 +427,8 @@
 	</dict>
 	<key>HideTab</key>
 	<false/>
+	<key>HotkeyMigratedFromSingleToMulti</key>
+	<true/>
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSNavLastRootDirectory</key>
@@ -450,7 +454,7 @@
 		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
 		hAErATGG
 		</data>
-		<string>307</string>
+		<string>322</string>
 	</array>
 	<key>NSTableView Hidden Columns KeyBingingTable</key>
 	<array/>
@@ -459,15 +463,15 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>457 1168 599 422 -143 1050 1920 1080 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>530 505 620 392 0 0 1680 1050 </string>
+	<string>530 482 620 392 0 0 1680 1027 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 108 606 456 0 0 1680 1050 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>545 418 796 473 0 0 1680 1050 </string>
+	<string>545 515 1018 447 0 0 1680 1050 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>12 1523 592 584 -143 1050 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>-142 1652 570 423 -143 1050 1920 1057 </string>
+	<string>862 291 585 425 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>486 568 570 423 0 0 1680 1027 </string>
 	<key>New Bookmarks</key>
@@ -1165,7 +1169,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>2C7D4D38-199E-4790-A7B5-FADE61715929</string>
 	<key>NoSyncLastTipTime</key>
-	<real>503383149.37196201</real>
+	<real>529143636.76098198</real>
 	<key>NoSyncPermissionToShowTip</key>
 	<true/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
@@ -1239,6 +1243,12 @@
 		<string>0063</string>
 		<string>0064</string>
 		<string>0065</string>
+		<string>0066</string>
+		<string>0067</string>
+		<string>0068</string>
+		<string>0069</string>
+		<string>0070</string>
+		<string>0071</string>
 	</array>
 	<key>PMPrintingExpandedStateForPrint2</key>
 	<false/>
@@ -1290,7 +1300,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-06-17T01:59:50Z</date>
+	<date>2017-10-10T23:18:34Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>Secure Input</key>
@@ -1311,9 +1321,11 @@
 	<string>/-+\~_.</string>
 	<key>findIgnoreCase_iTerm</key>
 	<true/>
+	<key>findMode_iTerm</key>
+	<integer>0</integer>
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.15</string>
+	<string>3.1.2</string>
 </dict>
 </plist>

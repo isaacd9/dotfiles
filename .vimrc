@@ -13,6 +13,7 @@ set expandtab
 set backspace=2
 
 set autoindent
+set smartindent
 set gdefault
 filetype plugin indent on
 "set omnifunc=syntaxcomplete#Complete
@@ -232,4 +233,13 @@ let g:slime_target = "tmux"
 let g:slime_paste_file = "$HOME/.slime_paste"
 
 set clipboard=unnamed
+set magic
+
+set showmatch
+set mat=2
+
+set nobackup
+set nowb
+set noswapfile
+
 

@@ -97,7 +97,8 @@ alias docker-clean=_docker_clean
 alias murder="pkill -9 -lif"
 alias "git commit"="gcs"
 
-alias vs="vagrant up"
+alias vs="vagrant status"
+alias vu="vagrant up"
 alias vh="vagrant halt"
 alias vd="vagrant destroy"
 alias vr="vagrant reload"
@@ -129,12 +130,20 @@ alias mike="node"
 alias ocaml="rlwrap ocaml"
 
 alias tobin=_tobin;
+alias commas="paste -sd,"
+alias spaces="paste -sd \" \" "
+
+alias gpe="gpg --armor -e -r"
+alias gpd="gpg -d"
+
+alias activate="source env/bin/activate"
 
 export GOPATH=~/code/go
 export PATH=$PATH:$GOPATH/bin
 export EDITOR="vim"
 
 export ANSIBLE_NOCOWS=1
+export ANSIBLE_HOST_KEY_CHECKING=False
 
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

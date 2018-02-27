@@ -65,10 +65,10 @@ alias sl=ls
 alias l=lein
 #alias vim=mvim
 
-if [ -e /usr/local/bin/mvim ]; then
-  alias vim="mvim -v"
+if [ -e /usr/local/bin/nvim ]; then
+  alias vim="nvim"
 else
-  echo "mvim not found, faling back to vim"
+  echo "neovim not found, faling back to vim"
   unalias vim
 fi
 

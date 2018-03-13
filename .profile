@@ -137,6 +137,7 @@ alias gpe="gpg --armor -e -r"
 alias gpd="gpg -d"
 
 alias activate="source env/bin/activate"
+alias xo="xo --space"
 
 export GOPATH=~/code/go
 export PATH=$PATH:$GOPATH/bin

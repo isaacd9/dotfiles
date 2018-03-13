@@ -17,6 +17,7 @@ if dein#load_state('/Users/isaac/.vim/dein')
   " Add or remove your plugins here:
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('Shougo/neosnippet-snippets')
+  call dein#add('elixir-editors/vim-elixir')
 
   call dein#add('w0rp/ale')
 
@@ -41,6 +42,6 @@ source ~/.vimrc
 let g:deoplete#enable_at_startup = 1
 let g:syntastic_mode_map = { 'mode': 'passive' }
 
-let g:ale_linters = { 'python': ['flake8'], }
+let g:ale_linters = { 'python': ['flake8'], 'javascript': ['xo'] }
 
 

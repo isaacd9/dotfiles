@@ -3,7 +3,7 @@ set runtimepath+=/Users/isaac/.vim/dein/repos/github.com/Shougo/dein.vim
 " Tempfix
 let g:ale_emit_conflict_warnings = 0
 
-let g:python2_host_prog = '/usr/local/bin/python'
+let g:python_host_prog = '/usr/local/opt/python@2/libexec/bin/python'
 let g:python3_host_prog = '/usr/local/bin/python3'
 
 "dein Scripts-----------------------------
@@ -18,6 +18,7 @@ if dein#load_state('/Users/isaac/.vim/dein')
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('Shougo/neosnippet-snippets')
   call dein#add('elixir-editors/vim-elixir')
+  call dein#add('hashivim/vim-terraform')
 
   call dein#add('w0rp/ale')
 
@@ -42,6 +43,6 @@ source ~/.vimrc
 let g:deoplete#enable_at_startup = 1
 let g:syntastic_mode_map = { 'mode': 'passive' }
 
-let g:ale_linters = { 'python': ['flake8'], 'javascript': ['xo'] }
+let g:ale_linters = { 'python': ['flake8'], 'javascript': ['xo'], 'HTML': ['tidy'] }
 
 

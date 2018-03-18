@@ -1,28 +1,13 @@
-<!--
-    This is a template for bug reports. If you want to request a new feature,
-    you can clear this entire form field and write a short description of what
-    you want.
--->
+Filing a bug? Have you already tried updating `vim-elixir`? For indentation/highlighting bugs, please use the following template:
 
-## Information
+# Actual
 
-**VIM version**
+```ex
+Example code
+```
 
-PASTE JUST THE FIRST TWO LINES OF `:version` HERE.
+# Expected
 
-Operating System: WHAT OS WERE YOU USING?
-
-### :ALEInfo
-
-PASTE OUTPUT OF `:ALEInfo` HERE. YOU CAN TRY `:ALEInfoToClipboard`.
-
-## What went wrong
-
-WRITE WHAT WENT WRONG HERE.
-
-## Reproducing the bug
-
-Steps for repeating the bug:
-
-1. Write a list of steps.
-2. Otherwise nobody will fix the bug.
+```ex
+Example code
+```

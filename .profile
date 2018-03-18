@@ -148,6 +148,7 @@ export ANSIBLE_HOST_KEY_CHECKING=False
 
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="/usr/local/opt/python@2/libexec/bin:$PATH"
 export PATH="/Users/isaac/code/scratch/k8s/kubernetes/client/bin:$PATH"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
